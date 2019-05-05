@@ -2,7 +2,7 @@
 
 '''
 1- Escriba un programa que permita crear una lista de palabras.
-Para ello, el programa tiene que pedir un número y luego solicitar ese número de palabras para crear la lista. 
+Para ello, el programa tiene que pedir un número y luego solicitar ese número de palabras para crear la lista.
 Por último, el programa tiene que escribir la lista.
 '''
 
@@ -28,6 +28,7 @@ else:
     print('¡Correcto!')
 
 
+#=============================================================================================================#
 
 
 
@@ -64,7 +65,7 @@ else:
     print('La palabra "' + buscar_palabra + '" no aparece en la lista.')
 
 
-
+#=============================================================================================================#
 
 
 #3-Escriba un programa que permita crear una lista de palabras y que, a continuación,
@@ -103,85 +104,196 @@ else:
     print('La lista es ahora: ', lista_de_palabras3)
 
 
-'''
+#=============================================================================================================#
 
 
-#AUN ME FALTA TERMINAR ESTA PARTE   :(
+#4- Escriba un programa que permita crear una lista de palabras y que, a continuación,
+#pida una palabra y elimine esa palabra de la lista.
+
+#instrucciones
+print('Instrucciones: este programa crea una lista de palabras de la longitud que usted requiera y elimina una palabra')
+
+print()
+lista_de_palabras4 = []
+cantidad_palabras4 = int(input('Por favor digite el número de palabras en su lista  '))
+
+for i in range(cantidad_palabras4):
+    palabra4 = str(input('Por favor digite la palabra ' + str(i+1)))
+    lista_de_palabras4.append(palabra4)
+
+
+print('La lista creada es: ', lista_de_palabras4)
+
+palabra_a_eliminar = str(input('Eliminar la palabra:'))
+
+
+if palabra_a_eliminar in lista_de_palabras4:  # si la palabra existe en la lista
+    lista_de_palabras4.remove(palabra_a_eliminar)  # quitarla de la lista
+
+else:
+    print('La palabra no existe')
+
+print('La lista es ahora: ', lista_de_palabras4)
+
+
+#=============================================================================================================#
+
+
+# 5-Escriba un programa que permita crear dos listas de palabras y que,
+#  a continuación, elimine de la primera lista los nombres de la segunda lista.
+
+print('Instrucciones: este programa crea dos listas de palabras, y elimina de la primera, las coincidencias de la segunda.')
+
+print()
+lista_de_palabrasA = []
+lista_de_palabrasB = []
+cantidad_palabrasA = int(input('Por favor digite el número de palabras en su lista A  '))
+cantidad_palabrasB = int(input('Por favor digite el número de palabras en su lista B  '))
+
+for i in range(cantidad_palabrasA):
+    palabraA = str(input('Por favor digite la palabra ' + str(i+1) + ' de la lista A:  '))
+    lista_de_palabrasA.append(palabraA)
+
+print('La lista A es: ', lista_de_palabrasA)
+
+for i in range(cantidad_palabrasB):
+    palabraB = str(input('Por favor digite la palabra ' + str(i+1)+ ' de la lista B:  '))
+    lista_de_palabrasB.append(palabraB)
+
+print('La lista B es: ', lista_de_palabrasB)
+
+for i in range(len(lista_de_palabrasB)):
+    if lista_de_palabrasB[i] in lista_de_palabrasA:
+        lista_de_palabrasA.remove(lista_de_palabrasB[i])
+        
+
+print('La nueva listaA, sin los repetidos de la lista B es: ', lista_de_palabrasA)
+
+
+#=============================================================================================================#
 
 
 
+# 6-Escriba un programa que permita crear una lista de palabras y que,
+# a continuación, cree una segunda lista igual a la primera, pero al revés
 
-Escriba un programa que permita crear una lista de palabras y que, a continuación, pida una palabra y elimine esa palabra de la lista.
-Dígame cuántas palabras tiene la lista: 4
-Dígame la palabra 1: Alberto
-Dígame la palabra 2: Carmen
-Dígame la palabra 3: Carmen
-Dígame la palabra 4: Benito
-La lista creada es: ['Alberto', 'Carmen', 'Carmen', 'Benito']
-Palabra a eliminar: Carmen
-La lista es ahora: ['Alberto', 'Benito']
+print('Instrucciones: este programa crea una lista y un duplicado de la misma pero invertido.')
 
+print()
+lista_de_palabrasOriginal = []
+lista_de_palabrasInvertida = []
+cantidad_palabras_original = int(input('Por favor digite el número de palabras en su lista  '))
 
 
-
-Escriba un programa que permita crear dos listas de palabras y que, a continuación, elimine de la primera lista los nombres de la segunda lista.
-Dígame cuántas palabras tiene la lista: 5
-Dígame la palabra 1: Carmen
-Dígame la palabra 2: Carmen
-Dígame la palabra 3: Alberto
-Dígame la palabra 4: Benito
-Dígame la palabra 5: David
-La lista creada es: ['Carmen', 'Carmen', 'Alberto', 'Benito', 'David']
-Dígame cuántas palabras tiene la lista de palabras a eliminar: 3
-Dígame la palabra 1: Benito
-Dígame la palabra 2: Juan
-Dígame la palabra 3: Carmen
-La lista de palabras a eliminar es: ['Benito', 'Juan', 'Carmen']
-La lista es ahora: ['Alberto', 'David']
+for i in range(cantidad_palabras_original):
+    palabra_orig = str(input('Por favor digite la palabra ' + str(i+1) + ' de la lista:  '))
+    lista_de_palabrasOriginal.append(palabra_orig)
+    lista_de_palabrasInvertida.append(palabra_orig)
 
 
+lista_de_palabrasInvertida.reverse()
 
 
-Escriba un programa que permita crear una lista de palabras y que, a continuación, cree una segunda lista igual a la primera, pero al revés (no se trata de escribir la lista al revés, sino de crear una lista distinta).
-Dígame cuántas palabras tiene la lista: 4
-Dígame la palabra 1: Alberto
-Dígame la palabra 2: Carmen
-Dígame la palabra 3: Benito
-Dígame la palabra 4: Daniel
-La lista creada es: ['Alberto', 'Carmen', 'Benito', 'Daniel']
-La lista inversa es: ['Daniel', 'Benito', 'Carmen', 'Alberto']
+print('La lista original es ', lista_de_palabrasOriginal)
+print('La lista invertida es ', lista_de_palabrasInvertida)
 
 
+#=============================================================================================================#
 
-Escriba un programa que permita crear una lista de palabras y que, a continuación, elimine los elementos repetidos (dejando únicamente el primero de los elementos repetidos).
-Dígame cuántas palabras tiene la lista: 4
-Dígame la palabra 1: Alberto
-Dígame la palabra 2: Carmen
-Dígame la palabra 3: Benito
-Dígame la palabra 4: Carmen
-La lista creada es: ['Alberto', 'Carmen', 'Benito', 'Carmen']
-La lista sin repeticiones es: ['Alberto', 'Carmen', 'Benito']
+# 7-Escriba un programa que permita crear una lista de palabras y que, a continuación,
+# elimine los elementos repetidos (dejando únicamente el primero de los elementos repetidos).
+
+#instrucciones
+print('Instrucciones: este programa crea una lista de palabras y elimina los repetidos')
+
+print()
+lista_de_palabras7 = []
+cantidad_palabras7 = int(input('Por favor digite el número de palabras en su lista  '))
+
+for i in range(cantidad_palabras7):
+    palabra7 = str(input('Por favor digite la palabra ' + str(i+1)))
+    lista_de_palabras7.append(palabra7)
+
+print('La lista creada es: ', lista_de_palabras7)
+
+#crear un diccionario y convertirlo en lista
+lista_de_palabras7 = list(dict.fromkeys(lista_de_palabras7)) # que contenga solo valores unicos (keys)
+
+print('La lista sin repeticiones es: ', lista_de_palabras7)
 
 
+#=============================================================================================================#
 
-Escriba un programa que permita crear dos listas de palabras y que, a continuación, escriba las siguientes listas (en las que no debe haber repeticiones):
-Lista de palabras que aparecen en las dos listas. Lista de palabras que aparecen en la primera lista, pero no en la segunda. Lista de palabras que aparecen en la segunda lista, pero no en la primera. Lista de palabras que aparecen en ambas listas. Nota: Para evitar las repeticiones, el programa deberá empezar eliminando los elementos repetidos en cada lista.
+# 8-Escriba un programa que permita crear dos listas de palabras y que, a continuación,
+# escriba las siguientes listas (en las que no debe haber repeticiones):
+#Lista de palabras que aparecen en las dos listas.
+#Lista de palabras que aparecen en la primera lista, pero no en la segunda.
+#Lista de palabras que aparecen en la segunda lista, pero no en la primera.
+#Nota: Para evitar las repeticiones, el programa deberá empezar eliminando los elementos repetidos en cada lista.
 
-Dígame cuántas palabras tiene la primera lista: 4
-Dígame la palabra 1: Carmen
-Dígame la palabra 2: Alberto
-Dígame la palabra 3: Benito
-Dígame la palabra 4: Carmen
-La primera lista es: ['Carmen', 'Alberto', 'Benito', 'Carmen']
-Dígame cuántas palabras tiene la segunda lista: 3
-Dígame la palabra 1: Benito
-Dígame la palabra 2: Juan
-Dígame la palabra 3: Carmen
-La segunda lista es: ['Benito', 'Juan', 'Carmen']
-Palabras que aparecen en las dos listas: ['Carmen', 'Benito']
-Palabras que sólo aparecen en la primera lista: ['Alberto']
-Palabras que sólo aparecen en la segunda lista: ['Juan']
-Todas las palabras: ['Carmen', 'Benito', 'Alberto', 'Juan']
-'''
+
+print('Instrucciones: este programa crea dos listas de palabras, y crea lista de intersecciones entre ellas.')
+
+print()
+
+
+#Crear primero las dos listas
+lista_de_palabras1 = []
+lista_de_palabras2 = []
+listas_combinadas = []
+cantidad_palabras1 = int(input('Por favor digite el número de palabras de su primera lista  '))
+
+for i in range(cantidad_palabras1):
+    palabra1 = str(input('Por favor digite la palabra ' + str(i+1) + ' de la primera lista:  '))
+    lista_de_palabras1.append(palabra1)
+    listas_combinadas.append(palabra1)
+
+print('La primera lista es: ', lista_de_palabras1)
+
+
+cantidad_palabras2 = int(input('Por favor digite el número de palabras de su segunda lista  '))
+
+for i in range(cantidad_palabras2):
+    palabra2 = str(input('Por favor digite la palabra ' + str(i+1)+ ' de la segunda lista:  '))
+    lista_de_palabras2.append(palabra2)
+    listas_combinadas.append(palabra2)
+
+print('La segunda lista es: ', lista_de_palabras2)
+
+#Obtener las mismas listas sin repetidos
+lista_de_palabras1 = list(dict.fromkeys(lista_de_palabras1))
+lista_de_palabras2 = list(dict.fromkeys(lista_de_palabras2))
+listas_combinadas = list(dict.fromkeys(listas_combinadas))
+
+
+#sacar intersecciones:
+#Lista de palabras que aparecen en las dos listas.
+
+def interseccion(plista1, plista2): #plista1, plista2 son parametros
+    a = set(plista1)
+    b = set(plista2)
+
+    return list(a & b)
+
+lista_palabras_en_ambas_listas = interseccion(lista_de_palabras1, lista_de_palabras2)
+
+print('Palabras que aparecen en las dos listas: ', lista_palabras_en_ambas_listas)
+
+
+#Lista de palabras que aparecen en la primera lista, pero no en la segunda.
+def returnNotMatches(plista1, plista2):
+    a = set(plista1)
+    b = set(plista2)
+    return [list(b - a), list(a - b)]
+
+solo_en_la_primera = returnNotMatches(lista_de_palabras1, lista_de_palabras2)[1]
+solo_en_la_segunda = returnNotMatches(lista_de_palabras1, lista_de_palabras2)[0]
+
+print('Palabras que sólo aparecen en la primera lista ', solo_en_la_primera)
+print('Palabras que sólo aparecen en la segunda lista ', solo_en_la_segunda)
+
+print('Todas las palabras: ', listas_combinadas)
+
+
 
 

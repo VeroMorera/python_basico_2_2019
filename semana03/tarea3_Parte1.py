@@ -36,6 +36,9 @@ agenda_hospital.extend(persona)
 total_pacientes = len(agenda_hospital)
 print('El total de pacientes es ', total_pacientes)
 
+
+#=============================================================================================================#
+
 #Segunda pregunta: Cuantas personas llegaron por dolor?
 
 acumulador = 0
@@ -46,7 +49,7 @@ for paciente in agenda_hospital:
 
 print('Las personas que llegaron por dolor son ', acumulador)
 
-
+#=============================================================================================================#
 
 #Tercera pregunta: Suponga que se atienden con orden de prioridad por edad, empezando por el adulto mayor.
 # Ordene la lista desde el más adulto al más joven
@@ -64,7 +67,7 @@ def ordenar_tupla(tup):
 for paciente in ordenar_tupla(agenda_hospital):
     print(paciente)
 
-
+#=============================================================================================================#
 
 
 #Cuarta Pregunta: Cuantos pacientes son mayores de edad? cuantos menores?
@@ -79,7 +82,7 @@ for paciente in agenda_hospital:
 
 print('El total de personas mayores de edad es ', acumulador)
 
-
+#=============================================================================================================#
 
 #Quinta Pregunta: Suponga que se atienden con orden de prioridad por gravedad de consulta,
 # empezando por los que tienen dolor y luego por edad (mas viejo al joven), empezando por el adulto mayor.
@@ -113,6 +116,9 @@ for paciente in ordenar_tupla(agenda_hospital):
 #imprimir la lista prioridad
 for paciente in agenda_prioridad:
     print(paciente)
+
+
+#=============================================================================================================#
 
 #Sexta pregunta: Suponga que los que tienen dolor mueren :(
 # Como queda la lista de pacientes vivos por atender ordenados por orden de edad desde el joven al viejo.
