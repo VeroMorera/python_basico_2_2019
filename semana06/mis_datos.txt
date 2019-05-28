@@ -1,0 +1,7 @@
+nombre: Vero Morera
+
+direccion: San Pedro
+
+telefono: 8000-8000
+
+correo: vm@gmail.com
